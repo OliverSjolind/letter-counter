@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #202020;
+}
+
+body #display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+body textarea {
+  height: 200px;
+  width: 80vw;
+  resize: vertical;
+  border: 1px solid white;
+  background: transparent;
+  padding: 10px;
+}
+
+body #copy {
+  border: 1px solid white;
+  cursor: pointer;
+  padding: 10px;
+  width: 50px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+body #copy:hover {
+  background-color: rgba(255, 255, 255, 0.075);
+}
+
+body #copy:active {
+  background-color: rgba(255, 255, 255, 0.226);
+}
+/*# sourceMappingURL=style.css.map */
