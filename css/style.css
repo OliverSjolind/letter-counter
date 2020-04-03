@@ -1,13 +1,28 @@
 * {
   margin: 0;
   padding: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-  color: white;
+  font-family: sans-serif;
 }
 
-body {
+#container {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #EFEFEF;
+}
+
+#container div {
+  width: 100%;
+}
+
+#container #content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,42 +36,77 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #202020;
+  width: 700px;
 }
 
-body #display {
+#container #content .titleContainer {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#container #content .titleContainer .title {
+  font-size: 3rem;
+  color: #8A1EF7;
+}
+
+#container #content .titleContainer .subtitle {
+  color: #acacac;
+  font-size: 12px;
+}
+
+#container #content #display {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  margin-bottom: 20px;
-}
-
-body textarea {
-  height: 200px;
-  width: 80vw;
-  resize: vertical;
-  border: 1px solid white;
-  background: transparent;
-  padding: 10px;
-}
-
-body #copy {
-  border: 1px solid white;
-  cursor: pointer;
-  padding: 10px;
-  width: 50px;
   text-align: center;
-  margin-top: 10px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-body #copy:hover {
-  background-color: rgba(255, 255, 255, 0.075);
+#container #content #display span {
+  color: #707070;
+  font-size: 45px;
 }
 
-body #copy:active {
-  background-color: rgba(255, 255, 255, 0.226);
+#container #content #display div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #acacac;
+  font-size: 12px;
+  margin-top: 15px;
+  width: auto;
+}
+
+#container #content textarea {
+  height: 180px;
+  resize: none;
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+  right: 10px;
+  position: relative;
+  border-radius: 5px;
+}
+
+@media (max-width: 750px) {
+  #container #content {
+    width: 90vw;
+  }
+  #container #content .titleContainer .title {
+    font-size: 2.1rem;
+  }
+  #container #content #display {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #container #content textarea {
+    height: 70vh;
+  }
 }
 /*# sourceMappingURL=style.css.map */

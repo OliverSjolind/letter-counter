@@ -1,47 +1,91 @@
 * {
     margin: 0;
     padding: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    color: white;
+    font-family: sans-serif;
 }
 
-body {
+#container {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    background-color: rgb(32, 32, 32);
+    background-color: #EFEFEF;
+
+    div {
+        width: 100%;
+    }
+
+    #content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 700px;
+        
+        .titleContainer {
+            margin-bottom: 30px;
+            text-align: center;
+            .title{
+                font-size: 3rem;
+                color: #8A1EF7;
+            }
+            .subtitle {
+                color: rgb(172, 172, 172);
+                font-size: 12px;
+            }
+    }
 
     #display {
         display: flex;
-        justify-content: space-evenly;
-        margin-bottom: 20px;
+        text-align: center;
+        justify-content: space-around;
+
+        span {
+            color: #707070;
+            font-size: 45px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            color: rgb(172, 172, 172);
+            font-size: 12px;
+            margin-top: 15px;
+            width: auto;
+        }
     }
 
     textarea {
-        height: 200px;
-        width: 80vw;
-        resize: vertical;
-        border: 1px solid white;
-        background: transparent;
+        height: 180px;
+        resize: none;
+        width: 100%;
         padding: 10px;
+        margin: 0 auto;
+        right: 10px;
+        position: relative;
+        border-radius: 5px;
     }
-    #copy {
-        border: 1px solid white;
-        cursor: pointer;
-        padding: 10px;
-        width: 50px;
-        text-align: center;
-        margin-top: 10px;
+    }
+}
 
-        &:hover {
-            background-color: rgba(255, 255, 255, 0.075);
-        }
-        &:active {
-            background-color: rgba(255, 255, 255, 0.226);
+@media (max-width: 750px) {
+    #container {
+        #content {
+            width: 90vw;
 
+            .titleContainer{
+                .title{
+                    font-size: 2.1rem;
+                }
+            }
+
+            #display {
+                justify-content: space-between;
+            }
+
+            textarea {
+                height: 70vh;
+            }
         }
     }
 }

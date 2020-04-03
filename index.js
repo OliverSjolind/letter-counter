@@ -1,7 +1,6 @@
 const textArea = document.getElementById('textarea')
 const letterDisplay = document.getElementById('letters')
 const wordDisplay = document.getElementById('words')
-const copyBtn = document.getElementById('copy')
 textArea.focus()
 
 const onTextInput = (e) => {
@@ -11,10 +10,4 @@ const onTextInput = (e) => {
     wordDisplay.innerText = textArr.length
     }
 
-const copy = () => {
-textArea.select()
-document.execCommand("copy");
-}
-
-copyBtn.addEventListener('click', copy)
 textArea.addEventListener('input', onTextInput, false)
